@@ -7,469 +7,218 @@
   <title>TElaine – Baller Life Collective | Built Between 5 and 9</title>
   <meta name="description" content="Baller Life Collective is for the woman with a full-time job and a full-time calling. Tools, resources, and community for the 5-9 CEO woman building her empire in the hours between." />
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
 ```
-:root {
-  --gold: #c9a84c;
-  --gold-light: #e8c97e;
-  --deep: #1a0a2e;
-  --royal: #3d1a6e;
-  --cream: #faf8f4;
-  --sans: Arial, Helvetica, sans-serif;
-  --serif: Georgia, 'Times New Roman', serif;
+html {
+  scroll-behavior: smooth;
+  background-color: #1a0a2e;
 }
 
-html { scroll-behavior: smooth; }
-
 body {
-  font-family: var(--serif);
-  background: var(--deep);
-  color: var(--cream);
+  font-family: Georgia, 'Times New Roman', serif;
+  background-color: #1a0a2e;
+  color: #faf8f4;
   overflow-x: hidden;
+  min-height: 100vh;
 }
 
 /* ── NAV ── */
 nav {
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 9999;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 1.5rem;
-  background: rgba(26,10,46,0.97);
-  border-bottom: 1px solid rgba(201,168,76,0.15);
+  padding: 16px 24px;
+  background-color: #1a0a2e;
+  border-bottom: 1px solid #3a2a50;
 }
 .nav-brand {
-  font-size: 0.95rem;
-  letter-spacing: 0.08em;
-  color: var(--gold);
+  font-size: 15px;
+  letter-spacing: 1px;
+  color: #c9a84c;
   font-weight: bold;
+  font-family: Georgia, serif;
 }
-.nav-brand span { color: rgba(250,248,244,0.55); font-weight: 300; }
-.nav-links { display: flex; gap: 0.5rem; align-items: center; }
-.nav-link {
+.nav-brand span { color: #9a8faa; font-weight: 300; }
+.nav-links { display: flex; gap: 8px; align-items: center; }
+.nav-btn {
   background: none;
   border: none;
-  color: rgba(250,248,244,0.6);
-  font-size: 0.75rem;
+  color: #9a8faa;
+  font-size: 12px;
   cursor: pointer;
-  font-family: var(--sans);
-  letter-spacing: 0.08em;
-  padding: 0.4rem 0.6rem;
+  font-family: Arial, sans-serif;
+  letter-spacing: 1px;
+  padding: 6px 10px;
+  text-transform: uppercase;
 }
-.nav-link:hover { color: var(--gold); }
+.nav-btn:hover { color: #c9a84c; }
 
-/* ── BUTTONS ── */
-.btn {
+.btn-gold {
   display: inline-block;
-  background: var(--gold);
-  color: var(--deep);
-  font-size: 0.78rem;
-  font-family: var(--sans);
+  background-color: #c9a84c;
+  color: #1a0a2e;
+  font-size: 12px;
+  font-family: Arial, sans-serif;
   font-weight: 700;
-  letter-spacing: 0.12em;
+  letter-spacing: 2px;
   text-transform: uppercase;
-  padding: 0.75rem 1.8rem;
+  padding: 12px 28px;
   border-radius: 2px;
   border: none;
   cursor: pointer;
   text-decoration: none;
-  transition: opacity 0.2s;
 }
-.btn:hover { opacity: 0.88; }
-.btn-ghost {
+.btn-gold:hover { background-color: #e8c97e; }
+
+.btn-outline {
   display: inline-block;
-  background: none;
-  border: 1px solid rgba(201,168,76,0.5);
-  color: var(--gold);
-  font-size: 0.78rem;
-  font-family: var(--sans);
+  background-color: transparent;
+  color: #c9a84c;
+  font-size: 12px;
+  font-family: Arial, sans-serif;
   font-weight: 700;
-  letter-spacing: 0.12em;
+  letter-spacing: 2px;
   text-transform: uppercase;
-  padding: 0.75rem 1.8rem;
+  padding: 12px 28px;
   border-radius: 2px;
+  border: 1px solid #c9a84c;
   cursor: pointer;
   text-decoration: none;
-  transition: border-color 0.2s;
 }
-.btn-ghost:hover { border-color: var(--gold); }
-.btn-sm { padding: 0.5rem 1rem; font-size: 0.72rem; }
 
 /* ── HERO ── */
 #hero {
+  background-color: #1a0a2e;
   min-height: 90vh;
+  padding: 64px 24px 48px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 4rem 1.5rem 3rem;
 }
 .eyebrow {
-  font-size: 0.68rem;
-  letter-spacing: 0.25em;
+  font-size: 11px;
+  letter-spacing: 4px;
   text-transform: uppercase;
-  color: rgba(201,168,76,0.7);
-  margin-bottom: 1.2rem;
-  font-family: var(--sans);
+  color: #a07830;
+  margin-bottom: 20px;
+  font-family: Arial, sans-serif;
 }
-#hero h1 {
-  font-size: 2.6rem;
-  font-weight: 300;
-  line-height: 1.1;
-  margin-bottom: 1.2rem;
-}
-#hero h1 em { font-style: italic; color: var(--gold-light); }
-#hero p {
-  font-size: 0.95rem;
-  line-height: 1.75;
-  color: rgba(250,248,244,0.75);
-  margin-bottom: 2rem;
-  max-width: 520px;
-  font-family: var(--sans);
-}
-#hero p strong { color: #f5e8c8; }
-.hero-btns { display: flex; gap: 0.8rem; flex-wrap: wrap; }
+#hero h1 { font-size: 42px; font-weight: 300; line-height: 1.1; margin-bottom: 20px; color: #faf8f4; }
+#hero h1 em { font-style: italic; color: #e8c97e; }
+#hero h1 strong { font-weight: 700; color: #faf8f4; }
+#hero .hero-sub { font-size: 15px; line-height: 1.75; color: #c0b8cc; margin-bottom: 32px; max-width: 520px; font-family: Arial, sans-serif; }
+#hero .hero-sub strong { color: #f5e8c8; }
+.hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
 
-.product-card {
-  background: linear-gradient(145deg, var(--royal), var(--deep));
-  border: 1px solid rgba(201,168,76,0.3);
+.hero-card {
+  background-color: #2a0a5e;
+  border: 1px solid #5a3a7a;
   border-radius: 8px;
-  padding: 1.8rem 1.5rem;
-  margin-top: 3rem;
-  max-width: 380px;
+  padding: 28px 24px;
+  margin-top: 48px;
+  max-width: 360px;
 }
-.product-card .card-icon { font-size: 1.8rem; margin-bottom: 0.5rem; }
-.product-card .card-title { font-size: 1.3rem; color: var(--gold-light); margin-bottom: 0.7rem; font-weight: 600; }
-.product-card .card-desc { font-size: 0.82rem; color: rgba(250,248,244,0.65); line-height: 1.6; font-family: var(--sans); margin-bottom: 1.2rem; }
-.price-badge {
-  display: inline-block;
-  background: rgba(201,168,76,0.15);
-  border: 1px solid rgba(201,168,76,0.3);
-  border-radius: 4px;
-  padding: 0.3rem 0.8rem;
-  margin-bottom: 1rem;
-}
-.price-badge .price { font-size: 2rem; color: var(--gold); font-weight: 700; font-family: var(--sans); }
+.hero-card-icon { font-size: 28px; margin-bottom: 8px; }
+.hero-card-title { font-size: 20px; color: #e8c97e; margin-bottom: 10px; font-weight: 600; font-family: Georgia, serif; }
+.hero-card-desc { font-size: 13px; color: #9a8faa; line-height: 1.6; font-family: Arial, sans-serif; margin-bottom: 18px; }
+.price-pill { display: inline-block; background-color: #1a0a0e; border: 1px solid #5a3a1a; border-radius: 4px; padding: 4px 14px; margin-bottom: 16px; }
+.price-pill .price { font-size: 32px; color: #c9a84c; font-weight: 700; font-family: Arial, sans-serif; }
 
 /* ── TRUTH ── */
-#truth {
-  padding: 3.5rem 1.5rem;
-  background: var(--cream);
-  color: var(--deep);
-}
-#truth .section-label {
-  font-size: 0.65rem;
-  letter-spacing: 0.28em;
-  text-transform: uppercase;
-  color: var(--royal);
-  margin-bottom: 1rem;
-  font-family: var(--sans);
-}
-#truth h2 {
-  font-size: 1.7rem;
-  font-weight: 300;
-  line-height: 1.2;
-  margin-bottom: 2rem;
-}
-#truth h2 em { color: var(--royal); }
-.truth-card {
-  background: white;
-  border: 1px solid rgba(61,26,110,0.1);
-  border-radius: 6px;
-  padding: 1.5rem;
-  margin-bottom: 1rem;
-}
-.truth-card .t-icon { font-size: 1.5rem; margin-bottom: 0.8rem; }
-.truth-card h3 { font-size: 1rem; color: var(--royal); margin-bottom: 0.5rem; font-weight: 600; }
-.truth-card p { font-size: 0.85rem; color: #3d2a5a; line-height: 1.7; font-family: var(--sans); }
+#truth { background-color: #faf8f4; color: #1a0a2e; padding: 56px 24px; }
+#truth .section-label { font-size: 10px; letter-spacing: 4px; text-transform: uppercase; color: #3d1a6e; margin-bottom: 16px; font-family: Arial, sans-serif; }
+#truth h2 { font-size: 26px; font-weight: 300; line-height: 1.3; margin-bottom: 32px; color: #1a0a2e; }
+#truth h2 em { font-style: italic; color: #3d1a6e; }
+.truth-card { background-color: #ffffff; border: 1px solid #ddd5ee; border-radius: 6px; padding: 24px; margin-bottom: 16px; }
+.truth-card .t-icon { font-size: 24px; margin-bottom: 12px; }
+.truth-card h3 { font-size: 16px; color: #3d1a6e; margin-bottom: 8px; font-weight: 600; font-family: Georgia, serif; }
+.truth-card p { font-size: 14px; color: #3d2a5a; line-height: 1.7; font-family: Arial, sans-serif; }
 
 /* ── ABOUT ── */
-#about {
-  padding: 3.5rem 1.5rem;
-  background: var(--deep);
+#about { background-color: #1a0a2e; padding: 56px 24px; }
+#about .section-label { font-size: 10px; letter-spacing: 4px; text-transform: uppercase; color: #a07830; margin-bottom: 24px; font-family: Arial, sans-serif; }
+.about-photo { width: 100%; max-width: 280px; height: 280px; border-radius: 8px; border: 3px solid #c9a84c; margin-bottom: 28px; object-fit: cover; display: block; }
+.about-photo-placeholder {
+  width: 100%; max-width: 280px; height: 280px; border-radius: 8px; border: 3px solid #c9a84c;
+  margin-bottom: 28px; background-color: #2a1a4e; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; font-family: Arial, sans-serif;
+  font-size: 13px; color: #a07830; letter-spacing: 1px; text-align: center; padding: 16px;
 }
-#about .section-label {
-  font-size: 0.65rem;
-  letter-spacing: 0.28em;
-  text-transform: uppercase;
-  color: rgba(201,168,76,0.7);
-  margin-bottom: 1.5rem;
-  font-family: var(--sans);
-}
-#about h2 { font-size: 1.7rem; font-weight: 300; line-height: 1.2; margin-bottom: 0.8rem; }
-#about h2 em { font-style: italic; color: var(--gold-light); }
-.credential-label {
-  font-size: 0.68rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: rgba(201,168,76,0.6);
-  margin-bottom: 1.5rem;
-  font-family: var(--sans);
-}
-#about p {
-  font-size: 0.88rem;
-  line-height: 1.8;
-  color: rgba(250,248,244,0.8);
-  font-family: var(--sans);
-  margin-bottom: 1.2rem;
-}
-blockquote {
-  font-style: italic;
-  font-size: 1.05rem;
-  color: var(--gold-light);
-  border-left: 3px solid var(--gold);
-  padding-left: 1rem;
-  margin: 1.5rem 0;
-}
-.tags { margin-top: 0.5rem; }
-.tag {
-  display: inline-block;
-  background: rgba(201,168,76,0.12);
-  border: 1px solid rgba(201,168,76,0.25);
-  border-radius: 3px;
-  padding: 0.3rem 0.8rem;
-  font-size: 0.68rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: rgba(201,168,76,0.8);
-  font-family: var(--sans);
-  margin: 0.3rem 0.3rem 0.3rem 0;
-}
+.about-photo-placeholder span { font-size: 40px; margin-bottom: 10px; display: block; }
+#about h2 { font-size: 26px; font-weight: 300; line-height: 1.3; margin-bottom: 12px; color: #faf8f4; }
+#about h2 em { font-style: italic; color: #e8c97e; }
+.cred-bar { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: #a07830; margin-bottom: 24px; font-family: Arial, sans-serif; }
+#about p { font-size: 14px; line-height: 1.8; color: #c0b8cc; font-family: Arial, sans-serif; margin-bottom: 18px; }
+blockquote { font-style: italic; font-size: 17px; color: #e8c97e; border-left: 3px solid #c9a84c; padding-left: 16px; margin: 24px 0; line-height: 1.6; }
+.tags { margin-top: 8px; }
+.tag { display: inline-block; background-color: #2a1a4e; border: 1px solid #5a3a7a; border-radius: 3px; padding: 5px 12px; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: #a07830; font-family: Arial, sans-serif; margin: 4px 4px 4px 0; }
 
-/* ── WHO IT'S FOR ── */
-#who {
-  padding: 3.5rem 1.5rem;
-  background: #120720;
-}
-#who h2 {
-  font-size: 1.7rem;
-  font-weight: 300;
-  margin-bottom: 1.8rem;
-  text-align: center;
-  line-height: 1.3;
-}
-#who h2 em { color: var(--gold-light); }
-.who-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.8rem;
-  padding: 1rem 0;
-  border-bottom: 1px solid rgba(201,168,76,0.1);
-}
-.who-check {
-  width: 20px;
-  height: 20px;
-  flex-shrink: 0;
-  background: var(--gold);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 2px;
-  font-size: 0.65rem;
-  font-weight: bold;
-  color: var(--deep);
-}
-.who-item p {
-  font-size: 0.88rem;
-  line-height: 1.6;
-  color: rgba(250,248,244,0.8);
-  font-family: var(--sans);
-}
+/* ── WHO ── */
+#who { background-color: #120720; padding: 56px 24px; }
+#who h2 { font-size: 26px; font-weight: 300; margin-bottom: 28px; text-align: center; line-height: 1.3; color: #faf8f4; }
+#who h2 em { color: #e8c97e; }
+.who-item { display: flex; align-items: flex-start; gap: 12px; padding: 16px 0; border-bottom: 1px solid #2a1a4e; }
+.who-check { width: 22px; height: 22px; min-width: 22px; background-color: #c9a84c; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: bold; color: #1a0a2e; margin-top: 2px; }
+.who-item p { font-size: 14px; line-height: 1.6; color: #c0b8cc; font-family: Arial, sans-serif; }
+.who-item p strong { color: #faf8f4; }
 
 /* ── PRODUCTS ── */
-#products {
-  padding: 3.5rem 1.5rem;
-  background: #f0eae0;
-}
-.products-header { text-align: center; margin-bottom: 2rem; }
-.products-header .section-label {
-  font-size: 0.65rem;
-  letter-spacing: 0.28em;
-  text-transform: uppercase;
-  color: var(--royal);
-  margin-bottom: 0.8rem;
-  font-family: var(--sans);
-}
-.products-header h2 { font-size: 1.7rem; font-weight: 300; color: var(--deep); line-height: 1.2; margin-bottom: 0.8rem; }
-.products-header p { font-size: 0.85rem; color: #3d2a5a; font-family: var(--sans); }
-.shop-card {
-  background: var(--deep);
-  color: var(--cream);
-  border-radius: 6px;
-  overflow: hidden;
-  margin-bottom: 1.2rem;
-  border: 1px solid rgba(201,168,76,0.2);
-}
-.shop-card-top {
-  padding: 1.8rem 1.5rem 1.2rem;
-  background: linear-gradient(145deg, var(--royal), var(--deep));
-}
-.shop-tag {
-  display: inline-block;
-  font-size: 0.62rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--gold);
-  background: rgba(201,168,76,0.15);
-  border: 1px solid rgba(201,168,76,0.3);
-  border-radius: 2px;
-  padding: 0.25rem 0.6rem;
-  margin-bottom: 0.8rem;
-  font-family: var(--sans);
-}
-.shop-card-top h3 { font-size: 1.2rem; color: var(--gold-light); margin-bottom: 0.6rem; font-weight: 600; }
-.shop-card-top p { font-size: 0.82rem; line-height: 1.7; color: rgba(250,248,244,0.65); font-family: var(--sans); }
-.shop-card-bottom {
-  padding: 1.2rem 1.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.shop-price { font-size: 1.8rem; color: var(--gold); font-weight: 700; font-family: var(--sans); }
-.shop-link {
-  background: rgba(201,168,76,0.15);
-  border: 1px solid rgba(201,168,76,0.4);
-  color: var(--gold);
-  font-size: 0.72rem;
-  font-family: var(--sans);
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  padding: 0.6rem 1.2rem;
-  border-radius: 2px;
-  text-decoration: none;
-  transition: background 0.2s;
-}
-.shop-link:hover { background: rgba(201,168,76,0.25); }
+#products { background-color: #f0eae0; padding: 56px 24px; }
+.products-header { text-align: center; margin-bottom: 32px; }
+.products-header .section-label { font-size: 10px; letter-spacing: 4px; text-transform: uppercase; color: #3d1a6e; margin-bottom: 12px; font-family: Arial, sans-serif; }
+.products-header h2 { font-size: 26px; font-weight: 300; color: #1a0a2e; line-height: 1.2; margin-bottom: 10px; }
+.products-header p { font-size: 13px; color: #3d2a5a; font-family: Arial, sans-serif; }
+.shop-card { background-color: #1a0a2e; border: 1px solid #3a2a50; border-radius: 6px; overflow: hidden; margin-bottom: 20px; }
+.shop-card-top { padding: 28px 24px 20px; background-color: #2a0a5e; }
+.shop-tag { display: inline-block; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: #c9a84c; background-color: #1a0a0e; border: 1px solid #5a3a1a; border-radius: 2px; padding: 4px 10px; margin-bottom: 12px; font-family: Arial, sans-serif; }
+.shop-card-top h3 { font-size: 20px; color: #e8c97e; margin-bottom: 10px; font-weight: 600; font-family: Georgia, serif; }
+.shop-card-top p { font-size: 13px; line-height: 1.7; color: #9a8faa; font-family: Arial, sans-serif; }
+.shop-card-bottom { padding: 20px 24px; display: flex; align-items: center; justify-content: space-between; background-color: #1a0a2e; }
+.shop-price { font-size: 28px; color: #c9a84c; font-weight: 700; font-family: Arial, sans-serif; }
+.shop-price-sm { font-size: 14px; color: #9a8faa; font-family: Arial, sans-serif; padding-top: 6px; }
+.shop-link { background-color: #1a0a0e; border: 1px solid #5a3a1a; color: #c9a84c; font-size: 11px; font-family: Arial, sans-serif; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 10px 18px; border-radius: 2px; text-decoration: none; }
+.shop-link-disabled { background-color: #1f1030; border: 1px solid #3a2a50; color: #5a4a7a; font-size: 11px; font-family: Arial, sans-serif; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 10px 18px; border-radius: 2px; cursor: default; }
 
 /* ── BALLER ── */
-#baller {
-  padding: 3.5rem 1.5rem;
-  background: var(--royal);
-  text-align: center;
-}
-#baller .section-label {
-  font-size: 0.65rem;
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
-  color: rgba(201,168,76,0.7);
-  margin-bottom: 1rem;
-  font-family: var(--sans);
-}
-.baller-title {
-  font-size: 3rem;
-  font-weight: 700;
-  letter-spacing: 0.15em;
-  color: var(--cream);
-  margin-bottom: 2rem;
-}
-.baller-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  max-width: 400px;
-  margin: 0 auto 2rem;
-  border: 1px solid rgba(201,168,76,0.2);
-  border-radius: 4px;
-  overflow: hidden;
-}
-.baller-cell {
-  padding: 1.2rem 0.5rem;
-  border-right: 1px solid rgba(201,168,76,0.15);
-  border-bottom: 1px solid rgba(201,168,76,0.15);
-}
-.baller-letter {
-  font-size: 2.2rem;
-  color: var(--gold);
-  font-weight: 700;
-  line-height: 1;
-  margin-bottom: 0.4rem;
-  font-family: var(--serif);
-}
-.baller-word {
-  font-size: 0.58rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: rgba(250,248,244,0.55);
-  font-family: var(--sans);
-}
-#baller p {
-  font-style: italic;
-  font-size: 1rem;
-  color: rgba(250,248,244,0.8);
-  max-width: 400px;
-  margin: 0 auto 2rem;
-  line-height: 1.7;
-}
+#baller { background-color: #3d1a6e; padding: 56px 24px; text-align: center; }
+#baller .section-label { font-size: 10px; letter-spacing: 4px; text-transform: uppercase; color: #a07830; margin-bottom: 16px; font-family: Arial, sans-serif; }
+.baller-title { font-size: 48px; font-weight: 700; letter-spacing: 6px; color: #faf8f4; margin-bottom: 32px; font-family: Georgia, serif; }
+.baller-grid { display: grid; grid-template-columns: repeat(3, 1fr); max-width: 380px; margin: 0 auto 32px; border: 1px solid #5a3a7a; border-radius: 4px; overflow: hidden; }
+.baller-cell { padding: 20px 8px; border-right: 1px solid #5a3a7a; border-bottom: 1px solid #5a3a7a; background-color: #2a0a5e; }
+.baller-letter { font-size: 36px; color: #c9a84c; font-weight: 700; line-height: 1; margin-bottom: 6px; font-family: Georgia, serif; }
+.baller-word { font-size: 9px; letter-spacing: 1px; text-transform: uppercase; color: #9a8faa; font-family: Arial, sans-serif; }
+.baller-quote { font-style: italic; font-size: 16px; color: #c0b8cc; max-width: 380px; margin: 0 auto 32px; line-height: 1.7; font-family: Georgia, serif; }
 
 /* ── CTA ── */
-#cta {
-  padding: 4rem 1.5rem;
-  background: var(--deep);
-  text-align: center;
-}
-#cta h2 {
-  font-size: 2.2rem;
-  font-weight: 300;
-  line-height: 1.15;
-  margin-bottom: 1.2rem;
-}
-#cta h2 em { font-style: italic; color: var(--gold-light); }
-#cta p {
-  font-size: 0.9rem;
-  color: rgba(250,248,244,0.65);
-  line-height: 1.75;
-  max-width: 480px;
-  margin: 0 auto 2rem;
-  font-family: var(--sans);
-}
-.cta-sub {
-  font-style: italic;
-  font-size: 0.82rem;
-  color: rgba(201,168,76,0.6);
-  margin-top: 1.5rem;
-  font-family: var(--sans);
-}
+#cta { background-color: #1a0a2e; padding: 64px 24px; text-align: center; }
+#cta h2 { font-size: 36px; font-weight: 300; line-height: 1.2; margin-bottom: 20px; color: #faf8f4; }
+#cta h2 em { font-style: italic; color: #e8c97e; }
+#cta p { font-size: 14px; color: #9a8faa; line-height: 1.75; max-width: 460px; margin: 0 auto 32px; font-family: Arial, sans-serif; }
+.cta-sub { font-style: italic; font-size: 13px; color: #7a5a2a; margin-top: 24px; font-family: Arial, sans-serif; }
 
 /* ── DISCLAIMER ── */
-#disclaimer {
-  padding: 2.5rem 1.5rem;
-  background: #0d0520;
-  border-top: 1px solid rgba(201,168,76,0.15);
-}
-#disclaimer .inner {
-  max-width: 600px;
-  margin: 0 auto;
-  text-align: center;
-}
-#disclaimer .section-label {
-  font-size: 0.62rem;
-  letter-spacing: 0.25em;
-  text-transform: uppercase;
-  color: rgba(201,168,76,0.5);
-  margin-bottom: 1rem;
-  font-family: var(--sans);
-}
-#disclaimer p {
-  font-size: 0.78rem;
-  line-height: 1.8;
-  color: rgba(250,248,244,0.45);
-  font-family: var(--sans);
-  margin-bottom: 1rem;
-}
-#disclaimer p strong { color: rgba(250,248,244,0.6); }
-#disclaimer p em { color: rgba(201,168,76,0.55); }
+#disclaimer { background-color: #0d0520; padding: 40px 24px; border-top: 1px solid #2a1a4e; }
+#disclaimer .inner { max-width: 600px; margin: 0 auto; text-align: center; }
+#disclaimer .section-label { font-size: 10px; letter-spacing: 4px; text-transform: uppercase; color: #7a5a2a; margin-bottom: 16px; font-family: Arial, sans-serif; }
+#disclaimer p { font-size: 12px; line-height: 1.8; color: #6a5a7a; font-family: Arial, sans-serif; margin-bottom: 14px; }
+#disclaimer p strong { color: #8a7a9a; }
+#disclaimer p em { color: #7a5a2a; font-style: italic; }
 
 /* ── FOOTER ── */
-footer {
-  padding: 1.5rem;
-  background: #0f0618;
-  border-top: 1px solid rgba(201,168,76,0.1);
+footer { background-color: #0f0618; padding: 24px; border-top: 1px solid #2a1a3a; }
+.footer-brand { font-size: 16px; color: #c9a84c; font-weight: bold; letter-spacing: 1px; margin-bottom: 6px; font-family: Georgia, serif; }
+.footer-copy { font-size: 11px; color: #4a3a5a; font-family: Arial, sans-serif; }
+
+@media (max-width: 480px) {
+  #hero h1 { font-size: 32px; }
+  #cta h2 { font-size: 28px; }
+  .baller-title { font-size: 36px; }
+  .baller-letter { font-size: 28px; }
 }
-.footer-brand { font-size: 1rem; color: var(--gold); font-weight: bold; letter-spacing: 0.08em; margin-bottom: 0.3rem; }
-.footer-copy { font-size: 0.68rem; color: rgba(250,248,244,0.3); font-family: var(--sans); }
 ```
 
   </style>
@@ -481,9 +230,9 @@ footer {
   <nav>
     <div class="nav-brand">TElaine <span>– Baller Life Collective</span></div>
     <div class="nav-links">
-      <button class="nav-link" onclick="document.getElementById('truth').scrollIntoView({behavior:'smooth'})">Philosophy</button>
-      <button class="nav-link" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">About</button>
-      <button class="btn btn-sm" onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">Shop</button>
+      <button class="nav-btn" onclick="document.getElementById('truth').scrollIntoView({behavior:'smooth'})">Philosophy</button>
+      <button class="nav-btn" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">About</button>
+      <button class="btn-gold" style="padding:8px 16px;font-size:11px;" onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">Shop</button>
     </div>
   </nav>
 
@@ -492,102 +241,94 @@ footer {
   <section id="hero">
     <div class="eyebrow">Built Between 5 and 9</div>
     <h1>You Were Built to <em>Break</em> Every <strong>Limit They Set.</strong></h1>
-    <p>Your 9-to-5 doesn't disqualify you from your calling. <strong>It funds it.</strong> BLC exists for the woman building her empire in the hours between.</p>
+    <p class="hero-sub">Your 9-to-5 doesn't disqualify you from your calling. <strong>It funds it.</strong> BLC exists for the woman building her empire in the hours between.</p>
     <div class="hero-btns">
-      <button class="btn" onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">Start Building →</button>
-      <button class="btn-ghost" onclick="document.getElementById('truth').scrollIntoView({behavior:'smooth'})">Our Philosophy</button>
+      <button class="btn-gold" onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">Start Building →</button>
+      <button class="btn-outline" onclick="document.getElementById('truth').scrollIntoView({behavior:'smooth'})">Our Philosophy</button>
     </div>
-
-```
-<div class="product-card">
-  <div class="card-icon">📚</div>
-  <div class="card-title">The 5-9 Builders Playbook</div>
-  <p class="card-desc">Your step-by-step guide to building your business in the hours you already have.</p>
-  <div class="price-badge"><div class="price">$17</div></div><br>
-  <a href="https://shop.beacons.ai/ballerlifecollective/341f00be-4d77-4066-a9f3-c6fc11fa6d4a" target="_blank" rel="noreferrer" class="btn">Get It Now →</a>
-</div>
-```
-
+    <div class="hero-card">
+      <div class="hero-card-icon">📚</div>
+      <div class="hero-card-title">The 5-9 Builders Playbook</div>
+      <p class="hero-card-desc">Your step-by-step guide to building your business in the hours you already have.</p>
+      <div class="price-pill"><div class="price">$17</div></div><br>
+      <a href="https://shop.beacons.ai/ballerlifecollective/341f00be-4d77-4066-a9f3-c6fc11fa6d4a" target="_blank" rel="noreferrer" class="btn-gold">Get It Now →</a>
+    </div>
   </section>
 
-  <!-- TRUTH -->
+  <!-- PHILOSOPHY -->
 
   <section id="truth">
     <div class="section-label">Our Philosophy</div>
     <h2>They told you to <em>quit your job</em> or you weren't serious about your dream. We're calling that what it is — a lie.</h2>
-
-```
-<div class="truth-card">
-  <div class="t-icon">🕐</div>
-  <h3>Your Calling Doesn't Have a Clock-In Time</h3>
-  <p>Purpose doesn't wait for a resignation letter. You can build while you work — and do it with integrity.</p>
-</div>
-<div class="truth-card">
-  <div class="t-icon">🧭</div>
-  <h3>Strategy Over Sacrifice</h3>
-  <p>You don't have to burn out to prove you're serious. Smart systems, focused time, and the right tools make the difference.</p>
-</div>
-<div class="truth-card">
-  <div class="t-icon">👑</div>
-  <h3>Identity First, Always</h3>
-  <p>You are a CEO before you have a single sale. Your mindset and identity lead your business — not the other way around.</p>
-</div>
-```
-
+    <div class="truth-card">
+      <div class="t-icon">🕐</div>
+      <h3>Your Calling Doesn't Have a Clock-In Time</h3>
+      <p>Purpose doesn't wait for a resignation letter. You can build while you work — and do it with integrity.</p>
+    </div>
+    <div class="truth-card">
+      <div class="t-icon">🧭</div>
+      <h3>Strategy Over Sacrifice</h3>
+      <p>You don't have to burn out to prove you're serious. Smart systems, focused time, and the right tools make the difference.</p>
+    </div>
+    <div class="truth-card">
+      <div class="t-icon">👑</div>
+      <h3>Identity First, Always</h3>
+      <p>You are a CEO before you have a single sale. Your mindset and identity lead your business — not the other way around.</p>
+    </div>
   </section>
 
   <!-- ABOUT -->
 
   <section id="about">
     <div class="section-label">The Woman Behind BLC</div>
-    <h2>I'm TElaine —<br><em>Revenue Manager by day. Transformation Coach by calling.</em></h2>
-    <div class="credential-label">BSN · MBA · 20+ Years Healthcare Finance</div>
-    <p>I spent years being excellent at my 9-to-5 while quietly carrying a calling I didn't know how to name. I looked for a blueprint for the woman who wasn't ready to quit — but was absolutely ready to build.</p>
-    <p>So I built one. For me — and for every woman sitting in a Monday morning meeting, dreaming of something more.</p>
-    <blockquote>"I don't believe you have to burn your life down to build your dream. I believe you can build it right where you are."</blockquote>
-    <p>Baller Life Collective exists for the woman who knows she's called to more and is done waiting for permission to walk in it.</p>
-    <div class="tags">
-      <span class="tag">BSN</span>
-      <span class="tag">MBA</span>
-      <span class="tag">Revenue Manager</span>
-      <span class="tag">Transformation Coach</span>
-      <span class="tag">5-9 Builder</span>
-      <span class="tag">Faith-Forward Leader</span>
-    </div>
+
+```
+<!--
+  ═══════════════════════════════════════════════
+  PHOTO INSTRUCTIONS — READ BEFORE PUBLISHING:
+  1. Upload your photo to your GitHub repo
+     (same folder as this index.html)
+  2. Name it: telaine-photo.jpg (or .png)
+  3. Delete the placeholder div below
+  4. Uncomment the img tag below it
+  ═══════════════════════════════════════════════
+-->
+<div class="about-photo-placeholder">
+  <span>📸</span>
+  YOUR PHOTO HERE<br><br>
+  <small>Upload photo to GitHub repo<br>as "telaine-photo.jpg"<br>then swap this block for:<br>
+  &lt;img src="telaine-photo.jpg"<br>class="about-photo"&gt;</small>
+</div>
+<!-- <img src="telaine-photo.jpg" alt="TElaine - Baller Life Collective" class="about-photo"> -->
+
+<h2>I'm TElaine —<br><em>Revenue Manager by day. Transformation Coach by calling.</em></h2>
+<div class="cred-bar">BSN · MBA · 20+ Years Healthcare Finance</div>
+<p>I spent years being excellent at my 9-to-5 while quietly carrying a calling I didn't know how to name. I looked for a blueprint for the woman who wasn't ready to quit — but was absolutely ready to build.</p>
+<p>So I built one. For me — and for every woman sitting in a Monday morning meeting, dreaming of something more.</p>
+<blockquote>"I don't believe you have to burn your life down to build your dream. I believe you can build it right where you are."</blockquote>
+<p>Baller Life Collective exists for the woman who knows she's called to more and is done waiting for permission to walk in it.</p>
+<div class="tags">
+  <span class="tag">BSN</span>
+  <span class="tag">MBA</span>
+  <span class="tag">Revenue Manager</span>
+  <span class="tag">Transformation Coach</span>
+  <span class="tag">5-9 Builder</span>
+  <span class="tag">Faith-Forward Leader</span>
+</div>
+```
+
   </section>
 
   <!-- WHO IT'S FOR -->
 
   <section id="who">
     <h2>You're in the right place if<br><em>any of this sounds like you...</em></h2>
-
-```
-<div class="who-item">
-  <div class="who-check">✓</div>
-  <p>You have a <strong>full-time job and a full-time calling</strong> — and you refuse to choose.</p>
-</div>
-<div class="who-item">
-  <div class="who-check">✓</div>
-  <p>You've been <strong>building in the margins</strong> — evenings, lunch breaks, early mornings.</p>
-</div>
-<div class="who-item">
-  <div class="who-check">✓</div>
-  <p>You're <strong>faith-grounded</strong> and believe your gifts are God-given, not accidental.</p>
-</div>
-<div class="who-item">
-  <div class="who-check">✓</div>
-  <p>You want <strong>tools, templates, and real strategy</strong> — not fluff and empty inspiration.</p>
-</div>
-<div class="who-item">
-  <div class="who-check">✓</div>
-  <p>You want to build something <strong>your daughter will point to</strong> and say "she did that."</p>
-</div>
-<div class="who-item">
-  <div class="who-check">✓</div>
-  <p>You believe being a Baller is about <strong>freedom</strong> — financial, creative, and purposeful.</p>
-</div>
-```
-
+    <div class="who-item"><div class="who-check">✓</div><p>You have a <strong>full-time job and a full-time calling</strong> — and you refuse to choose.</p></div>
+    <div class="who-item"><div class="who-check">✓</div><p>You've been <strong>building in the margins</strong> — evenings, lunch breaks, early mornings.</p></div>
+    <div class="who-item"><div class="who-check">✓</div><p>You're <strong>faith-grounded</strong> and believe your gifts are God-given, not accidental.</p></div>
+    <div class="who-item"><div class="who-check">✓</div><p>You want <strong>tools, templates, and real strategy</strong> — not fluff and empty inspiration.</p></div>
+    <div class="who-item"><div class="who-check">✓</div><p>You want to build something <strong>your daughter will point to</strong> and say "she did that."</p></div>
+    <div class="who-item"><div class="who-check">✓</div><p>You believe being a Baller is about <strong>freedom</strong> — financial, creative, and purposeful.</p></div>
   </section>
 
   <!-- PRODUCTS -->
@@ -598,45 +339,39 @@ footer {
       <h2>Tools Built for the Woman<br><em>Between 5 and 9</em></h2>
       <p>Practical, faith-forward resources for the woman building on purpose.</p>
     </div>
-
-```
-<div class="shop-card">
-  <div class="shop-card-top">
-    <div class="shop-tag">⭐ Live Now</div>
-    <h3>The 5-9 Builders Playbook</h3>
-    <p>Your step-by-step guide to building your business in the hours you already have.</p>
-  </div>
-  <div class="shop-card-bottom">
-    <div class="shop-price">$17</div>
-    <a href="https://shop.beacons.ai/ballerlifecollective/341f00be-4d77-4066-a9f3-c6fc11fa6d4a" target="_blank" rel="noreferrer" class="shop-link">Get It Now</a>
-  </div>
-</div>
-
-<div class="shop-card">
-  <div class="shop-card-top">
-    <div class="shop-tag">📖 Coming Soon</div>
-    <h3>From Cubicle to Calling</h3>
-    <p>Biblical principles for the woman who knows she's built for more.</p>
-  </div>
-  <div class="shop-card-bottom">
-    <div class="shop-price" style="font-size:1rem; padding-top:0.4rem;">Coming Soon</div>
-    <span class="shop-link" style="opacity:0.5; cursor:default;">Notify Me</span>
-  </div>
-</div>
-
-<div class="shop-card">
-  <div class="shop-card-top">
-    <div class="shop-tag">🗓 Coming Soon</div>
-    <h3>90-Minute Empire Planner</h3>
-    <p>Design your week around your calling, not just your calendar.</p>
-  </div>
-  <div class="shop-card-bottom">
-    <div class="shop-price" style="font-size:1rem; padding-top:0.4rem;">Coming Soon</div>
-    <span class="shop-link" style="opacity:0.5; cursor:default;">Notify Me</span>
-  </div>
-</div>
-```
-
+    <div class="shop-card">
+      <div class="shop-card-top">
+        <div class="shop-tag">⭐ Live Now</div>
+        <h3>The 5-9 Builders Playbook</h3>
+        <p>Your step-by-step guide to building your business in the hours you already have.</p>
+      </div>
+      <div class="shop-card-bottom">
+        <div class="shop-price">$17</div>
+        <a href="https://shop.beacons.ai/ballerlifecollective/341f00be-4d77-4066-a9f3-c6fc11fa6d4a" target="_blank" rel="noreferrer" class="shop-link">Get It Now</a>
+      </div>
+    </div>
+    <div class="shop-card">
+      <div class="shop-card-top">
+        <div class="shop-tag">📖 Coming Soon</div>
+        <h3>From Cubicle to Calling</h3>
+        <p>Biblical principles for the woman who knows she's built for more.</p>
+      </div>
+      <div class="shop-card-bottom">
+        <div class="shop-price-sm">Coming Soon</div>
+        <span class="shop-link-disabled">Notify Me</span>
+      </div>
+    </div>
+    <div class="shop-card">
+      <div class="shop-card-top">
+        <div class="shop-tag">🗓 Coming Soon</div>
+        <h3>90-Minute Empire Planner</h3>
+        <p>Design your week around your calling, not just your calendar.</p>
+      </div>
+      <div class="shop-card-bottom">
+        <div class="shop-price-sm">Coming Soon</div>
+        <span class="shop-link-disabled">Notify Me</span>
+      </div>
+    </div>
   </section>
 
   <!-- BALLER FRAMEWORK -->
@@ -652,8 +387,8 @@ footer {
       <div class="baller-cell"><div class="baller-letter">E</div><div class="baller-word">Everyday</div></div>
       <div class="baller-cell"><div class="baller-letter">R</div><div class="baller-word">Responsibly</div></div>
     </div>
-    <p>Every woman in BLC is a Baller — not because of what she has, but because of what she's building.</p>
-    <button class="btn" onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">Join the Collective →</button>
+    <p class="baller-quote">Every woman in BLC is a Baller — not because of what she has, but because of what she's building.</p>
+    <button class="btn-gold" onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">Join the Collective →</button>
   </section>
 
   <!-- FINAL CTA -->
@@ -661,7 +396,7 @@ footer {
   <section id="cta">
     <h2>Your calling is<br><em>already inside you.</em></h2>
     <p>Join the community of 5-9 CEO women who are done waiting for permission to walk in their purpose.</p>
-    <a href="https://beacons.ai/ballerlifecollective" target="_blank" rel="noreferrer" class="btn">Start Your Baller Journey →</a>
+    <a href="https://beacons.ai/ballerlifecollective" target="_blank" rel="noreferrer" class="btn-gold">Start Your Baller Journey →</a>
     <p class="cta-sub">Built Between 5 and 9. On purpose. On purpose.</p>
   </section>
 
